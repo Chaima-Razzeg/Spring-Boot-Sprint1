@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="template">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajouter Produit</title>
+    <link rel="stylesheet" type="text/css" href="webjars/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/main.css" />
+    <script type="text/javascript" src="webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div layout:fragment="Mycontent">
+    <div class="container mt-5">
+        <div class="card-body">
+            <form action="saveCosmetic" method="post">
+                <div class="form-group">
+                    <label class="control-label">Name : </label>
+                    <input type="text" name="cosmeticName" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Price: </label>
+                    <input type="text" name="itemPrice" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Expiration date:</label>
+                    <input type="date" name="date" class="form-control"/>
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-primary">Add</button>
+                </div>
+            </form>
+        </div>
+        <br/>
+        <br/>
+        <a href="ListCosmetics">List of cosmetic products</a>
+    </div>
+</div>
+</body>
+</html>
